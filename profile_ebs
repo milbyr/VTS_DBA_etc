@@ -1,0 +1,23 @@
+PATH=/usr/bin:/etc:/usr/sbin:/usr/ucb:$HOME/bin:/usr/bin/X11:/sbin:.:/usr/vacpp/bin
+export PATH
+
+if [ -s "$MAIL" ]           # This is at Shell startup.  In normal
+then echo "$MAILMSG"        # operation, the Shell checks
+fi                          # periodically.
+
+export AIXTHREAD_SCOPE=S
+
+.   /applu002/EBSapps.env run
+#
+##. /applu002/fs1/EBSapps/appl/APPSU002_vedi1sx001.env
+## . /applu002/fs2/EBSapps/appl/APPSU002_vedi1sx001.env
+
+if [ -f /export/vtssupp/VTS/etc/kshrc_apps ]; then
+  . /export/vtssupp/VTS/etc/kshrc_apps
+fi
+
+if [ -f $HOME/.kshrc ]; then
+  . $HOME/.kshrc
+fi
+
+#

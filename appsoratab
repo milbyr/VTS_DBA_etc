@@ -1,0 +1,53 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# field descriptions
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# 1 Environment
+# 2 Port Pool
+# 3 DB Host
+# 4 DB mount points 1:Oracle_home 2: DB data Vol
+# 5 CP host
+# 6 CP mount points
+# 7 iAS host(s)
+# 8 iAS mount points
+# 9 apps password (crypt.ksh .appspwd)
+#10 terminal colour
+#11 workflow mail account
+#12 WebLogic password (crypt.ksh .appspwd)
+#13 filer name
+#14 filer snapshots to be kept online
+#15 storage pool on the filer
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+#
+## shut down 20151105 ##D000:0:vedi1sx001:1120-/orad000/11.2.0,1210-/orad000/12.1.0,data01-/orad000/data01,data02-/orad000/data02,data03-/orad000/data03,diag-/orad000/diag:vedi1sx001:fs1-/appld000/fs1,fs2-/appld000/fs2,fs_ne-/appld000/fs_ne,custm-/appld000/custom,csf-/appld000/csf:vedi1sx001::U2FsdGVkX191iah7ldnsIpKdo7fXMS04fBOApq8AiuI=:red:wfd000:U2FsdGVkX18mW0cK4BA9cBHiebpMtJQb4U5IDX8RPx8=:vedi1disk01:7:B
+#
+U002:2:vedi1sx001:ora1120-/orau002/11.2.0,ora1210-/orau002/12.1.0,data01-/orau002/data01,data02-/orau002/data02,data03-/orau002/data03,fra-/orau002/fra,diag-/orau002/diag,fs1-/applu002/fs1,fs2-/applu002/fs2,fs_ne-/applu002/fs_ne,custom-/applu002/custom,csf-/applu002/csf:vedi1sx001::vedi1sx001:/applu002/fs1,/applu002/fs2,/applu002/fs_ne,/applu002/custom,/applu002/csf:U2FsdGVkX193EpXwaTjELa6pM80q1l0W6A980Y1fACc=:red:wfu002:U2FsdGVkX1+bGinUsAJDrC2LoLEPbrkEx6rDLZGoyvE=:SVC:7:B
+#
+D003:3:vedi1sx001:ora1120-/orad003/11.2.0,ora1210-/orad003/12.1.0,data01-/orad003/data01,data02-/orad003/data02,data03-/orad003/data03,fra-/orad003/fra,diag-/orad003/diag,fs1-/appld003/fs1,fs2-/appld003/fs2,fs_ne-/appld003/fs_ne,custom-/appld003/custom,csf-/appld003/csf:vedi1sx001::vedi1sx001:/appld003/fs1,/appld003/fs2,/appld003/fs_ne,/appld003/custom,/appld003/csf:U2FsdGVkX18NY5KvXk89i0uh79aUaBfUNn3SAQArKKY=:red:wfd003:U2FsdGVkX18B8Po5ZuqP9Nye7TEw/5P9rFAnTFb1u4M=:SVC:7:B
+#
+D004:4:vedi1sx001:ora1120-/orad004/11.2.0,ora1210-/orad004/12.1.0,data01-/orad004/data01,data02-/orad004/data02,data03-/orad004/data03,fra-/orad004/fra,diag-/orad004/diag,fs1-/appld004/fs1,fs2-/appld004/fs2,fs_ne-/appld004/fs_ne,custom-/appld004/custom,csf-/appld004/csf:vedi1sx001::vedi1sx001:/appld004/fs1,/appld004/fs2,/appld004/fs_ne,/appld004/custom,/appld004/csf:U2FsdGVkX19pVQQoRI9JZVNDClg7YMF393jcEfPau6k=:red:wfd004:U2FsdGVkX18eA31b0WBupDaN9ps9f4Gbs3QHkHhn3Xg=:SVC:7:B
+#
+D005:5:vedi1sx001:ora1120-/orad005/11.2.0,ora1210-/orad005/12.1.0,data01-/orad005/data01,data02-/orad005/data02,data03-/orad005/data03,fra-/orad005/fra,diag-/orad005/diag,fs1-/appld005/fs1,fs2-/appld005/fs2,fs_ne-/appld005/fs_ne,custom-/appld005/custom,csf-/appld005/csf:vedi1sx001::vedi1sx001:/appld005/fs1,/appld005/fs2,/appld005/fs_ne,/appld005/custom,/appld005/csf:U2FsdGVkX1+gpnKNpUWb5f049pZAXbWYokRCNOkNNmY=:red:wfd005:U2FsdGVkX18y12obzLULQhsrHM9AhgUSo5dGwLqiLEA=:SVC:6:B
+#
+## shut down 20151103 ##D006:6:vedi1sx001:1120-/orad006/11.2.0,1210-/orad006/12.1.0,data01-/orad006/data01,data02-/orad006/data02,data03-/orad006/data03,diag-/orad006/diag:vedi1sx001:fs1-/appld006/fs1,fs2-/appld006/fs2,fs_ne-/appld006/fs_ne,custm-/appld006/custom,csf-/appld006/csf:vedi1sx001::U2FsdGVkX1+HY3DQ283ZbIMJkDmBtQEofRSekag/XNA=:red:wfd006:U2FsdGVkX18Ala93VZEyyeflyS1TbHPWTRAtnp1f+Yk=:vedi1disk01:7:Ladbrokes
+#
+D007:7:vedi1sx001:ora1120-/orad007/11.2.0,ora1210-/orad007/12.1.0,data01-/orad007/data01,data02-/orad007/data02,data03-/orad007/data03,fra-/orad007/fra,diag-/orad007/diag,fs1-/appld007/fs1,fs2-/appld007/fs2,fs_ne-/appld007/fs_ne,custom-/appld007/custom,csf-/appld007/csf:vedi1sx001::vedi1sx001:/appld007/fs1,/appld007/fs2,/appld007/fs_ne,/appld007/custom,/appld007/csf:U2FsdGVkX1+d9LAMHEQuaETpEgfsc6lvQwLEb2L77uw=:red:wfd007:U2FsdGVkX18Ebm/DSXbvLe3utiqjsEvsSSJdd9I1Ync=:SVC:7:B
+###D004:4:vedi1sx001:ora1120-/orad004/11.2.0,ora1210-/orad004/12.1.0,data01-/orad004/data01,data02-/orad004/data02,data03-/orad004/data03,fra-/orad004/fra,diag-/orad004/diag,fs1-/appld004/fs1,fs2-/appld004/fs2,fs_ne-/appld004/fs_ne,custom-/appld004/custom,csf-/appld004/csf:vedi1sx001::vedi1sx001:/appld004/fs1,/appld004/fs2,/appld004/fs_ne,/appld004/custom,/appld004/csf:U2FsdGVkX19pVQQoRI9JZVNDClg7YMF393jcEfPau6k=:red:wfd004:U2FsdGVkX18eA31b0WBupDaN9ps9f4Gbs3QHkHhn3Xg=:SVC:7:B
+#
+#V008:8:vedi1sx001:1120-/orav008/11.2.0,1210-/orav008/12.1.0,data01-/orav008/data01,data02-/orav008/data02,data03-/orav008/data03,diag-/orav008/diag:vedi1sx001:fs1-/applv008/fs1,fs2-/applv008/fs2,fs_ne-/applv008/fs_ne,custm-/applv008/custom,csf-/applv008/csf:vedi1sx001::U2FsdGVkX1+o99VQZ1lbN7z7EZ502CFJN1j/EvMaMHQ=:red:wfv008:U2FsdGVkX1/YCmuzL3MlC1hWuwysi+1uXAIPQhMp9Qo=:SVC:7:B
+#
+D009:4:vedi1sx001:ora1120-/orad009/11.2.0,ora1210-/orad009/12.1.0,data01-/orad009/data01,data02-/orad009/data02,data03-/orad009/data03,fra-/orad009/fra,diag-/orad009/diag,fs1-/appld009/fs1,fs2-/appld009/fs2,fs_ne-/appld009/fs_ne,custom-/appld009/custom,csf-/appld009/csf:vedi1sx001::vedi1sx001:/appld009/fs1,/appld009/fs2,/appld009/fs_ne,/appld009/custom,/appld009/csf:U2FsdGVkX1+k3IbptASMT+VEuVzvZGJHE7WHw99rEcs=:red:wfd009:U2FsdGVkX1/PLjlvQgOp6LLeh37BBuztyBliBG45vyY=:SVC:7:B
+#
+D008:8:vedi1sx001:ora1120-/orad008/11.2.0,ora1210-/orad008/12.1.0,data01-/orad008/data01,data02-/orad008/data02,data03-/orad008/data03,fra-/orad008/fra,diag-/orad008/diag,fs1-/appld008/fs1,fs2-/appld008/fs2,fs_ne-/appld008/fs_ne,custom-/appld008/custom,csf-/appld008/csf:vedi1sx001::vedi1sx001:/appld008/fs1,/appld008/fs2,/appld008/fs_ne,/appld008/custom,/appld008/csf:U2FsdGVkX1+iAwlC/oDBlBelNdD5dsA4vBahUOvj56I=:red:wfv008:U2FsdGVkX1+qSU8QuxVegfe5hDA89txT2il8Unaza1w=:SVC:0:B
+#
+PRD1:11,21:vedi1sx004:ora1120-/oraprd1/11.2.0,ora1210-/oraprd1/12.1.0,data01-/oraprd1/data01,data02-/oraprd1/data02,data03-/oraprd1/data03,fra-/oraprd1/fra,diag-/oraprd1/diag,fs1-/applprd1/fs1,fs2-/applprd1/fs2,fs_ne-/applprd1/fs_ne,custom-/applprd1/custom,csf-/applprd1/csf:vedi1sx004::vedi1sx005,vedi1sx006:/applprd1/fs1,/applprd1/fs2,/applprd1/fs_ne,/applprd1/custom,/applprd1/csf:U2FsdGVkX1+kRELG10upbbBFVjHyW6WqhjgSo5JEJPI=:red:wfprd1:U2FsdGVkX1/Mnk98EKFdPB4xc81VJ0+WntmpNjJZnxc=:SVC:7:A
+#
+#SUPP:80,90:vedi1sx004:ora1120-/orasupp/11.2.0,ora1210-/orasupp/12.1.0,data01-/orasupp/data01,data02-/orasupp/data02,data03-/orasupp/data03,fra-/orasupp/fra,diag-/orasupp/diag:vedi1sx004:fs1-/applsupp/fs1,fs2-/applsupp/fs2,fs_ne-/applsupp/fs_ne,custom-/applsupp/custom,csf-/applsupp/csf:vedi1sx005,vedi1sx006:/applsupp/fs1,/applsupp/fs2,/applsupp/fs_ne,/applsupp/custom,/applsupp/csf:U2FsdGVkX184Wb1miu5Mt/nc6SZ4zSnQhWlvVDuwYpI=:red:wfprd1:U2FsdGVkX1/44FwqRV/4ey/aS1/jHozqdAA8mxL5C48=:vedi1disk01:7:Ladbrokes
+SUPP:80,90:vedi1sx004:ora1120-/orasupp/11.2.0,ora1210-/orasupp/12.1.0,data01-/orasupp/data01,data02-/orasupp/data02,data03-/orasupp/data03,fra-/orasupp/fra,diag-/orasupp/diag,fs1-/applsupp/fs1,fs2-/applsupp/fs2,fs_ne-/applsupp/fs_ne,custom-/applsupp/custom,csf-/applsupp/csf:vedi1sx004::vedi1sx005,vedi1sx006:/applsupp/fs1,/applsupp/fs2,/applsupp/fs_ne,/applsupp/custom,/applsupp/csf:U2FsdGVkX184Wb1miu5Mt/nc6SZ4zSnQhWlvVDuwYpI=:red:wfprd1:U2FsdGVkX1/44FwqRV/4ey/aS1/jHozqdAA8mxL5C48=:SVC:7:B
+#
+V010:99:vedi1sx001:ora1120-/orav010/11.2.0,ora1210-/orav010/12.1.0,data01-/orav010/data01,data02-/orav010/data02,data03-/orav010/data03,fra-/orav010/fra,diag-/orav010/diag,fs1-/applv010/fs1,fs2-/applv010/fs2,fs_ne-/applv010/fs_ne,custom-/applv010/custom,csf-/applv010/csf:vedi1sx001::vedi1sx001:/applv010/fs1,/applv010/fs2,/applv010/fs_ne,/applv010/custom,/applv010/csf:U2FsdGVkX184Wb1miu5Mt/nc6SZ4zSnQhWlvVDuwYpI=:red:wfprd1:U2FsdGVkX1/44FwqRV/4ey/aS1/jHozqdAA8mxL5C48=:SVC:7:B
+#
+LBPD01:0:vedi1lbsx04:ora1120-/orapd01/db/tech_st/11.2.0,data01-/orapd01/db/apps_st/data01,data02-/orapd01/db/apps_st/data02,data03-/orapd01/db/apps_st/data03,diag-/orapd01/db/diag,fra-/orapd01/db/apps_st/fra,appl-/applpd01/apps,inst-/applpd01/inst,csf-/applpd01/csf:vedi1lbsx05::vedi1lbsx05:/applpd01/apps,/applpd01/inst,/applpd01/csf:U2FsdGVkX19A7N2KN6uPpQkxz22S3OiuWWTmG2goBYU=:red:wfpd01::vedi1svc01:21:A:
+#
+LBSUPP:0:vedi1lbsx04:ora1120-/orasupp/db/tech_st/11.2.0,data01-/orasupp/db/apps_st/data01,data02-/orasupp/db/apps_st/data02,data03-/orasupp/db/apps_st/data03,diag-/orasupp/db/diag,fra-/orasupp/db/apps_st/fra,appl-/applsupp/apps,inst-/applsupp/inst,csf-/applsupp/csf:vedi1lbsx05::vedi1lbsx05:/applsupp/apps,/applsupp/inst,/applsupp/csf:U2FsdGVkX19A7N2KN6uPpQkxz22S3OiuWWTmG2goBYU=:red:wfpd01::vedi1svc01:7:A:
+#
+

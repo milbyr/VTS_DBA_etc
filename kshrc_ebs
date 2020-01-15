@@ -1,0 +1,79 @@
+set -o vi
+#
+export AIXTHREAD_SCOPE=S
+#
+alias md5sum="csum -h MD5 "
+#
+alias cde="cd /export/vtssupp/EBS_AIX;pwd"
+alias cdr="cd /export/vtssupp/EBS_AIX/StageR122/startCD/Disk1/rapidwiz;pwd"
+#
+ORACLE_HOSTNAME=$(hostname)
+export ORACLE_HOSTNAME
+
+HOSTNAME=`hostname`
+
+LC_SID=`echo ${ORACLE_SID} | tr [A-Z] [a-z]`
+export ME=`whoami`
+
+DISPLAY=:1.0
+export DISPLAY
+
+EDITOR=/usr/bin/vi
+export EDITOR
+
+export DBA=/export/vtssupp/VTS
+export PATCH_TOP=/${ME}/fs_ne/EBSapps/patch/
+alias sqldba="$ORACLE_HOME/bin/sqlplus / as sysdba"
+export APPSPWD=$($DBA/bin/vts_crypt.ksh -d `grep "^$TWO_TASK:" $DBA/etc/appsoratab | cut -d: -f9` )
+export WLPWD=$($DBA/bin/vts_crypt.ksh -d `grep "^$TWO_TASK:" $DBA/etc/appsoratab | cut -d: -f12` )
+alias sqlapps="$ORACLE_HOME/bin/sqlplus apps/$APPSPWD"
+alias appsstart="cd $ADMIN_SCRIPTS_HOME/;{ echo \"apps\"; echo ${APPSPWD}; echo ${WLPWD}; } | adstrtal.sh -nopromptmsg"
+alias appsstop="cd $ADMIN_SCRIPTS_HOME/;{ echo \"apps\"; echo ${APPSPWD}; echo ${WLPWD}; } | adstpall.sh -nopromptmsg"
+
+alias cdo="cd $ORACLE_HOME;pwd"
+alias cdtns="cd $TNS_ADMIN;pwd"
+alias cddbs="cd $ORACLE_HOME/dbs;pwd"
+alias sid="echo \$ORACLE_SID"
+alias cdsoft="cd $DBA/software/;pwd"
+alias cdudump="cd /${ME}/inst/admin/${ORACLE_SID}_$HOSTNAME/udump;pwd"
+alias cdbdump="cd /${ME}/diag/rdbms/`echo ${ORACLE_SID} | tr [A-Z] [a-z]`_$HOSTNAME/${ORACLE_SID}/trace;pwd"
+alias cdpfile="cd /${ME}/inst/admin/${ORACLE_SID}_$HOSTNAME/pfile;pwd"
+alias cdalf="cd /${ME}/db/apps_st/recovery_area/arch"
+alias cdscripts="cd $ADMIN_SCRIPTS_HOME;pwd"
+alias cdxml="cd $CONTEXT_FILE | sed -e \"s/${CONTEXT_NAME}.xml//\";pwd"
+alias cdadoplog="cd $ADOP_LOG_HOME;pwd"
+alias cdlog="cd $APPLCSF/$APPLLOG;pwd"
+alias cdout="cd $APPLCSF/$APPLOUT;pwd"
+
+alias cdtickets="cd $DBA/../Tickets;pwd"
+alias cdv="cd $DBA/bin;pwd"
+alias cdvl="cd $DBA/logs;pwd;ls -ltr | tail -10"
+alias cdsql="cd $DBA/sql;pwd"
+export SQLPATH=$DBA/sql:$AD_TOP/sql
+alias fs="df -g | awk '{print \$1\"\\t\"\$7}' | sort"
+
+
+##alias auto="cd $ORACLE_HOME/appsutil/bin; perl adconfig.pl contextfile=${ORACLE_HOME}/appsutil/${ORACLE_SID}_${HOSTNAME}.xml"
+
+export PATCH_TOP_DIR=/export/vtssupp/EBS_AIX/PATCHES/R12.2
+alias cdpatches="cd /export/vtssupp/EBS_AIX/PATCHES/R12.2; pwd"
+export P=/export/vtssupp/EBS_AIX/PATCHES/R12.2
+#
+if [ -d $APPLCSF/temp ]; then
+  export TMP=$APPLCSF/temp
+  export TMPDIR=$APPLCSF/temp
+else
+  export TMP=/tmp
+  export TMPDIR=/tmp
+fi
+
+
+
+if [ $RUN_BASE = '/applprd1/fs1' ]; then
+export WL_PORT_NO='7012'
+elif [ $RUN_BASE = '/applprd1/fs2' ]; then
+export WL_PORT_NO='7022'
+fi
+
+PS1='[${ME}@${HOSTNAME} ${PWD##/*/}] $ '
+#

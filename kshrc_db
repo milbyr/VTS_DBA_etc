@@ -1,0 +1,62 @@
+set -o vi
+#
+export AIXTHREAD_SCOPE=S
+#
+alias md5sum="csum -h MD5 "
+#
+alias cde="cd /export/vtssupp/EBS_AIX;pwd"
+alias cdr="cd /export/vtssupp/EBS_AIX/StageR122/startCD/Disk1/rapidwiz;pwd"
+#
+ORACLE_HOSTNAME=$(hostname)
+export ORACLE_HOSTNAME
+
+HOSTNAME=`hostname`
+export HOSTNAME
+
+LC_SID=`echo ${ORACLE_SID} | tr [A-Z] [a-z]`
+export ME=`whoami`
+
+
+##DISPLAY=:1.0
+##export DISPLAY
+
+EDITOR=/usr/bin/vi
+export EDITOR
+
+export DBA=/export/vtssupp/VTS
+
+alias sqldba="$ORACLE_HOME/bin/sqlplus / as sysdba"
+export APPSPWD=$($DBA/bin/vts_crypt.ksh -d `grep "^$ORACLE_SID:" $DBA/etc/appsoratab | cut -d: -f9 ` )
+alias sqlapps="$ORACLE_HOME/bin/sqlplus apps/$APPSPWD"
+
+alias cdo="cd $ORACLE_HOME;pwd"
+alias cdtns="cd $TNS_ADMIN;pwd"
+alias cddbs="cd $ORACLE_HOME/dbs;pwd"
+alias sid="echo \$ORACLE_SID"
+alias cdsoft="cd $DBA/software/;pwd"
+alias cdbdump="cd /${ME}/diag/rdbms/`echo ${ORACLE_SID} | tr [A-Z] [a-z]`_$HOSTNAME/${ORACLE_SID}/trace;pwd"
+alias cdpfile="cd /${ME}/inst/admin/${ORACLE_SID}_$HOSTNAME/pfile;pwd"
+alias cdalf="cd /${ME}/fra/archive"
+alias cdscripts="cd $ORACLE_HOME/appsutil/scripts/$CONTEXT_NAME;pwd"
+
+alias cdtickets="cd $DBA/../Tickets;pwd"
+alias cdrman="cd /oraprod/diag/PROD/rman;pwd"
+alias cdv="cd $DBA/bin;pwd"
+alias cdvl="cd $DBA/logs;pwd; ls -ltr | tail -10"
+alias cdsql="cd $DBA/sql;pwd"
+export SQLPATH="$DBA/sql"
+
+alias fs="df -g | awk '{print \$1\"\\t\"\$7}' | sort"
+
+##alias auto="cd $ORACLE_HOME/appsutil/bin; perl adconfig.pl contextfile=${ORACLE_HOME}/appsutil/${ORACLE_SID}_${HOSTNAME}.xml"
+
+
+export PATCH_TOP_DIR=/export/vtssupp/EBS_AIX/PATCHES/RDBMS/11.2.0.3
+export P=$PATCH_TOP_DIR
+
+
+export TMP=/tmp
+export TMPDIR=/tmp
+
+PS1='[${ME}@${HOSTNAME} ${PWD##/*/}] $ '
+#
